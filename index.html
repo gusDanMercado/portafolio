@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- mis estilos -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- Bootstrap V4 para los Tooltips 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        No agrege esta version de bootstrap (V4) ya que me modifica mi proyecto,
+        lo habia agregado por el tema de los Tooltips para las imagenes, pero para esto utilizo unicamente los script de
+        esta version 4 de Bootstrap y a mi script.js le agrego la funcion "tooltip" y LISTO SOLUCIONADO
+    -->
+
+    <title> Gustavo Mercado | Portafolio</title>
+</head>
+<body> 
+
+    <!-- HEADER -->
+    <header>
+        <video src="video/videopresentacion.mp4" autoplay loop muted></video>
+    
+        <div class="container h-100 bg-dark bg-opacity-75 rounded-5">
+            <div class="d-flex h-100 text-center align-items-center">
+                <div class="w-100 text-light">
+                    <img src="img/icono.png" alt="" class="rounded-circle">
+                    <h1 class="m-4">GUSTAVO DANIEL MERCADO</h1>
+                    <hr class="linea"> 
+                    <p class="fs-3" style="letter-spacing:6px">Programador JavaScript</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--
+    <div class="video">
+        <div class="ratio ratio-16x9">
+            <video src="video/videopresentacion.mp4" autoplay loop muted></video>
+
+            -- HERO 
+            <div class="container-fluid bg-dark p-2 bg-opacity-75">
+                <header class="text-center m-5">
+                    <img src="img/icono.png" alt="" class="rounded-circle">
+                    <h1 class="m-4 text-light">GUSTAVO DANIEL MERCADO</h1>
+                    <hr class="linea">   --linea color="#36bed9"
+                    <p class="text-light fs-3" style="letter-spacing:5px">Programador JavaScript</p>
+                </header>
+            </div>
+        </div>
+    </div>
+    -->
+    <!--
+    <div class="container">
+        <header class="text-center m-5">
+            <img src="img/icono.png" alt="" class="rounded-circle">
+            <h1 class="m-4">Gustavo Daniel Mercado</h1>
+            <hr class="border border-info" border-color="#36bed9">
+            <h2>Programador JavaScript</h2>
+            <div class="ratio ratio-16x9">
+                <video src="video/videopresentacion.mp4" autoplay loop muted></video>
+            </div>    
+        </header>
+    </div>
+    
+    <header class="video">
+        <img class="circle" src="img/icono.png" alt="logo large">
+        <h1>Tu nombre</h1><hr>
+        <h2>Desarrollador Frontend</h2>
+        <video autoplay="" loop="" muted=""><source src="video/videopresentacion.mp4"></video>
+    </header>
+    -->
+
+    <!-- BARRA DE NAVEGACION (resumen de lo que va a contener mi portafolio) --
+    <nav>
+        <img src="img/icono2.png" alt="" class="rounded-circle" width="25">
+        <p>Gustavo Daniel Mercado Programador JavaScript</p>
+        <ul>
+            <li>Portafolio</li>  --ejemplos de trabajos realizados--
+            <li>Habilidades</li> 
+            <li>Experiencia</li>
+            <li>Contacto</li>
+        </ul>
+    </nav>
+    -->
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container"> <!--- align-middle  fluid -->
+
+            <a class="navbar-brand fs-6" href="https://gustavomercadocurriculum.netlify.app/" target="_blank" data-toggle="tooltip" data-placement="top" title="Curriculum">
+                <img src="img/icono2.png" width="25" class="rounded-circle">
+                Gustavo Daniel Mercado Programador JavaScript
+                <!--<embed src="documentos/curriculum.pdf" type="application/pdf" width="100%" height="100%">
+                <object data="documentos/curriculum.pdf" type=""></object>
+                <iframe src="documentos/curriculum.pdf" frameborder="0"></iframe>-->
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end float-end" id="navbarNavAltMarkup">
+                <div class="container">
+                    <ul class="navbar-nav justify-content-end">
+                        <li class="nav-item text-center"><a class="nav-link active" href="#portafolio">Portafolio</a></li>  
+                        <li class="nav-item text-center"><a class="nav-link active" href="#habilidades">Habilidades</a></li> 
+                        <li class="nav-item text-center"><a class="nav-link active" href="#experiencia">Experiencia</a></li>
+                        <li class="nav-item text-center"><a class="nav-link active" href="#contacto">Contacto</a></li>
+                    </ul>    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--
+    <div class="container-fluid bg-dark text-center p-5">
+        <section id="habilidades">
+            <h3 class="text-light">HABILIDADES</h3>
+            <hr class="linea">
+
+            <img src="img/logoHTML.png" width="112" height="112" alt="" class="img-fluid">  -- ancho y alto --
+            <img src="img/logoCSS.png" width="112" height="112" alt="" class="img-fluid">
+            <img src="img/logoBootstrap.png" width="160" height="112" alt="" class="img-fluid">
+            <img src="img/logoJS.png" alt="" width="140" height="112" class="img-fluid">
+            <img src="img/logoGit.png" alt="" width="112" height="112" class="img-fluid">
+            <img src="img/logoGitHub3.png" alt="" width="140" height="112" class="img-fluid">
+
+            --
+            <div class="row">
+                <div class="col">
+
+                </div>
+            </div>
+            --
+        </section>
+    </div>
+    -->
+
+    <section id="portafolio">
+        <div class="container-fluid p-5 text-center">
+            <h3 class="text-dark">PORTAFOLIO</h3>
+            <hr class="linea1">
+            <div class="row">
+                <div class="col-sm-3 col-xs-4 image-container p-4">
+                    <!-- <a href=""><img src="img2/trabajo01.png" alt="" width="250" height="250" class="img-fluid"></a> -->
+                    <!--<img src="img2/trabajo01.png" alt="" onmouseover="this.width=1133;this.height=861;" onmouseout="this.width=250;this.height=250;" width="250" height="250">
+                    <p class="">Mi primera calculadora realizada utilizando HTML, CSS y JS</p>  -->
+
+                    <!-- Button trigger modal --> 
+                    <div class="container-fluid">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="img2/logoPaginaCalculadora.png" width="301" height="211" alt="" class="contenedor_imagen rounded mx-auto d-block img-fluid">
+                        </button>
+                    </div>
+                
+                    <!--
+                    <div class="contenedor_imagen">
+                        <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="img2/trabajo01.png" alt="" class="img-fluid rounded mx-auto d-block">
+                        </a>
+                    </div>
+                    -->
+
+                    <!-- Modal -->
+
+                    <div class="container-fluid text-center">
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Mi Primera Calculadora</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="img2/trabajo01.png" alt="" class="img-fluid">  <!-- width="1133" height="861" -->
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="https://micalculadoramercadogustavo.netlify.app/" target="_blank" class="btn btn-secondary">Ir a la calculadora</a>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="habilidades">
+
+        <div class="container-fluid text-center p-5">  <!-- bg-dark -->
+            <h3 class="text-light">HABILIDADES</h3>
+            <hr class="linea2">
+    
+            <div class="row">
+                <div class="col-sm-3 col-xs-4 image-container p-4">
+                    <img src="img2/logoHTML.png" width="112" height="112" alt="" class="img-fluid" data-toggle="tooltip" data-placement="top" title="HTML">  <!-- ancho y alto -->
+                </div>
+            
+                <div class="col-sm-3 col-xs-4 image-container p-4">
+                    <img src="img2/logoCSS.png" width="112" height="112" alt="" class="img-fluid" data-toggle="tooltip" data-placement="top" title="CSS">
+                </div>
+
+                <div class="col-sm-3 col-xs-4 image-container p-4">
+                    <img src="img2/logoBootstrap.png" width="112" height="112" alt="" class="img-fluid" data-toggle="tooltip" data-placement="top" title="Bootstrap">
+                </div>
+
+                <div class="col-sm-3 col-xs-4 image-container p-4">
+                    <img src="img2/logoJS.png" width="112" height="112" alt="" class="img-fluid" data-toggle="tooltip" data-placement="top" title="JavaScript">
+                </div>
+
+                <div class="col-sm-3 col-xs-4 image-container p-4">
+                    <img src="img2/logoGit.png" width="112" height="112" alt="" class="img-fluid" data-toggle="tooltip" data-placement="top" title="Git">
+                </div>
+
+                <div class="col-sm-3 col-xs-4 image-container p-4">
+                    <img src="img2/iconoGithub.png" width="112" height="112" alt="" class="img-fluid" data-toggle="tooltip" data-placement="top" title="GitHub">    
+                </div> <!-- logoGitHub.png -->
+
+                <div class="col-sm-3 col-xs-4 image-container p-4">
+                    <img src="img2/logoNetlify1.png" width="112" height="112" alt="" class="img-fluid" data-toggle="tooltip" data-placement="top" title="Netlify">    
+                </div>
+
+                <div class="col-sm-3 col-xs-4 image-container p-4">
+                    <img src="img2/logoPostgresql.png" width="112" height="112" alt="" class="img-fluid" data-toggle="tooltip" data-placement="top" title="PostgreSQL">    
+                </div>
+
+                <div class="col-sm-3 col-xs-4 image-container p-4">
+                    <img src="img2/logomysql.png" width="112" height="112" alt="" class="img-fluid" data-toggle="tooltip" data-placement="top" title="MySQL">    
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="experiencia">
+        <div class="container-fluid text-center p-5">
+            <h3 class="text-dark">EXPERIENCIA</h3>
+            <hr class="linea1">
+
+            <!-- 
+
+            <div class="row">
+                <div class="col-sm-3 col-xs-4 image-container p-4">
+                    <a href=""><img src="img2/logounsa.jpg" alt="" width="250" height="250" class="img-fluid"></a>
+                    <p class="">CICLO DE INGRESO UNIVERSITARIO (CIU)</p>
+                    <p>
+                        Asistencia y ayuda a los ingresantes durante el Momento II del CIU 2020-2021 a travez del 
+                        Area Virtual.
+                    </p>
+                </div>   
+                
+                <div class="col-sm-3 col-xs-4 image-container p-4">
+                    <a href=""><img src="img2/logounsa.jpg" alt="" width="250" height="250" class="img-fluid"></a>
+                    <p>FACULTAD DE CIENCIAS EXACTAS</p>
+                    <p>Alumno Auxiliar Docente de Segunda Categoría en Programación, con extensión de funciones a Elementos de Programación</p>
+                </div>   
+
+                <div class="col-sm-3 col-xs-4 image-container p-4">
+                    <a href=""><img src="img2/logounsa.jpg" alt="" width="250" height="250" class="img-fluid"></a>
+                    <p>DIRECCIÓN GENERAL DEL CENTRO DE COMPUTOS</p>
+                    <p>
+                        Desarrollo de personalizaciones existentes en SIU-GUARANI 2 para ser implementadas en SIU-GUARANI 3 y sistemas conexos,
+                        integración con demás sistemas de gestión de la Universidad; colaboración en el análisis, reorganización y estandarización
+                        de procesos y circuitos administrativos y toda tarea indicada por la autoridad.
+                    </p>
+                </div>  
+                
+                <div class="col-sm-3 col-xs-4 image-container p-4">
+                    <a href=""><img src="img2/logounsa.jpg" alt="" width="250" height="250" class="img-fluid"></a>
+                    <p>1000 PROGRAMADORES SALTEÑOS</p>
+                    <p>Profesor de Consulta de JAVA en 1000 Programadores Salteños.</p>
+                </div> 
+                
+                <div class="col-sm-3 col-xs-4 image-container p-4">
+                    <a href=""><img src="img2/logounsa.jpg" alt="" width="250" height="250" class="img-fluid"></a>
+                    <p>OTRA ACTIVIDAD!!!!</p>
+                    <P>descripcion</P>
+                </div> 
+            </div>
+
+            -->
+
+            <div class="container border border-2 p-3">
+                <div class="row">
+                    <div class="col-sm-3 col-xs-4 image-container p-4">
+                        <a href="https://www.unsa.edu.ar/" target="_blank"><img src="img2/logounsa.jpg" alt="" class="img-fluid"></a>
+                    </div>   
+    
+                    <div class="col-sm p-4 border border-2">
+                        <p class="text-center">CICLO DE INGRESO UNIVERSITARIO (CIU)</p>
+                        <hr class="linea1 bg-dark">
+                        <p class="text-justify">
+                            Asistencia y ayuda a los ingresantes durante el Momento II del CIU 2020-2021 a travez del 
+                            Area Virtual.
+                        </p>                
+                    </div> 
+                    
+                    <div class="col-sm p-4 border border-2">  <!-- col-sm-3 col-xs-4 p-4 -->
+                        <p class="text-center">FACULTAD DE CIENCIAS EXACTAS</p>
+                        <hr class="linea1 bg-dark">
+                        <p class="text-justify">
+                            Alumno Auxiliar Docente de Segunda Categoría en Programación, con extensión de funciones a Elementos de Programación.
+                        </p>
+                    </div>   
+    
+                    <div class="col-sm p-4 border border-2">
+                        <p class="text-center">DIRECCIÓN GENERAL DEL CENTRO DE COMPUTOS</p>
+                        <hr class="linea1 bg-dark">
+                        <p class="text-justify">
+                            Desarrollo de personalizaciones existentes en <a href="https://www.economicas.unsa.edu.ar/web/index.php/que-es-siu-guarani" target="_blank">SIU-GUARANI</a> 2 para ser implementadas en SIU-GUARANI 3 y sistemas conexos,
+                            integración con demás sistemas de gestión; colaboración en el análisis, reorganización y estandarización
+                            de procesos y circuitos administrativos y toda tarea indicada por la autoridad.
+                        </p>
+                    </div>  
+                    
+                    <div class="col-sm p-4 border border-2">
+                        <p class="text-center">1000 PROGRAMADORES SALTEÑOS</p>
+                        <hr class="linea1 bg-dark">
+                        <p class="text-justify">Profesor de Consulta de JAVA en 1000 Programadores Salteños.</p>
+                    </div> 
+                
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <section id="contacto">
+
+        <div class="container-fluid text-center p-5 text-light">  <!-- bg-dark -->
+            <h3>CONTACTO</h3>
+            <hr class="linea2">
+
+            <div class="container">
+                <form enctype="multipart/form-data" action="post.php" method="post" id="formulario">   <!--  action="" usar metodo post/get para enviar formulario -->
+                    <div class="row mb-3">
+                        <label for="nombre" class="form-label p-3 fs-5">Su Nombre:</label><br> 
+                        <div class="container form-floating">
+                            <input type="text" id="nombre" name="nombre" class="form-control fs-5" placeholder="Ingrese su nombre" required>   
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="telefono" class="form-label p-3 fs-5">Su Telefono:</label><br> 
+                        <div class="container form-floating">
+                            <input type="tel" id="telefono" name="telefono" class="form-control fs-5">   
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label for="email" class="form-label p-3 fs-5">Su Correo:</label><br> 
+                        <div class="container form-floating">
+                            <input type="email" id="email" name="email" class="form-control fs-5" required>   
+                        </div>
+                    </div>
+                    
+                    <label for="mensaje" class="form-label p-3 fs-5">Su mensaje:</label><br>
+                    <div class="form-floating">
+                        <textarea name="mensaje" id="mensaje" cols="" rows="" class="form-control fs-5" required></textarea>  <!--  form-label fs-5 rounded-4 cols="86" rows="2"-->
+                    </div>
+    
+                    <div class="mb-3 p-2">
+                        <input type="submit" value="Enviar" id="btn_enviar" class="btn btn-danger m-5 fs-4 rounded-4 p-2">
+                    </div>
+                </form>
+    
+                <nav class="container">
+                    <div class="row ">
+                        <div class="col-sm-4">
+                            <a href="https://www.linkedin.com/in/gustavo-mercado-3334a1173/" target="_blank"><img src="img2/iconoLn.png" alt="" width="40" height="40"></a>
+                        </div>
+    
+                        <div class="col-sm-4">
+                            <a href="https://github.com/" target="_blank"><img src="img2/iconoGithub.png" alt="" wid2h="40" height="40"></a>
+                        </div>
+    
+                        <div class="col-sm-4">
+                            <a href="https://www.youtube.com/channel/UCKwkSO9-6l3-DrIapg3sJ3w" target="_blank"><img src="img2/iconoYoutube.png" alt="" wi2th="40" height="40"></a>
+                        </div>
+    
+                    </div>
+                </nav>
+            </div>
+    
+        </div>
+    </section>
+
+    <footer class="container-fluid bg-dark text-light">
+        <div class="text-center p-4">
+            <small>Desarrollado y Diseñado por Gustavo Daniel Mercado. @2022. Todos los derechos reservados.</small>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap V4 para los Tooltips -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <!-- al ultimo cargo mi script -->
+    <script src="scriptv3.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

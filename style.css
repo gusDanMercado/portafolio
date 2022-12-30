@@ -1,0 +1,79 @@
+/* HEADER */
+
+.linea1 {
+    border: 0;  /*le quito los bordes*/ 
+    height: 3px; /*2px;*/
+    background-image: linear-gradient(to right, transparent, #36bed9, transparent);  /*efecto de degrade en el color*/    
+}
+
+.linea2 {
+    border: 0; 
+    height: 3px;
+    background-image: linear-gradient(to right, transparent, white, transparent);
+}
+
+header {
+    position: relative;
+    height: 42vh; /*75vh;*/
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* NAV */
+.navbar {
+    background-color: #20bddc;
+}
+
+.nav-item:hover {
+    background-color: white;
+    background-image: linear-gradient(to right, #36bed9, transparent, #36bed9);
+}
+
+
+/* otras partes de mi portafolio */
+
+#habilidades, #contacto {
+    background-color: #36bed9;
+}
+
+#email, #mensaje, #nombre, #telefono {
+    background-color: #5eb4c5;
+    border: 1px solid #439fb1;
+    overflow : hidden; /*para quitar la barra de desplazamiento del textarea*/
+}
+
+/*Zoom sobre una imagen*/
+.contenedor_imagen:hover {
+    -webkit-transform: scale(1.3) /*scale(1.3)*/;
+    transform: scale(1.1) /*scale(1.3)  2.0*/;
+    
+    /*
+    transition: transform .2s;
+    transform: scale(2.0);   scale(1.5); */ 
+}
+
+.contenedor_imagen {
+    overflow:hidden;
+    /*transition: transform .2s;*/
+}
