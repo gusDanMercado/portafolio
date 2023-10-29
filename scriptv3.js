@@ -77,14 +77,14 @@ const validarMensaje = () => {
 const validarFormulario = (e) => {
     e.preventDefault();  //detemos el submit (el envio del formulario) ya que nosotros vamos a procesar este formulario con JS
 
-    if(validarNombre()==true && validarTelefono()==true && validarCorreo()==true && validarMensaje()==true){
+    if(validarNombre()==true && validarTelefono()==true && validarCorreo()==true){ //&& validarMensaje()==true
         //enviamos al informacion de nuestro formulario a un archivo php 
         let datos = new FormData(formulario);  //obtengo los datos del formulario
         //para ver los datos:
         console.log(datos);
         console.log(datos.get("nombre"));
         console.log(datos.get("telefono"));
-        
+        /*
         fetch('./post.php', {
             method: 'post',
             headers: { // cabeceras HTTP
@@ -100,8 +100,19 @@ const validarFormulario = (e) => {
         ).catch(e)(
             console.log("El error es: "+e)
         );
+        */
+        formulario.submit();
+        //alert("Muchas gracias, su mensaje fue recibido correctamente y sera respondido lo mas antes posible");
+        //Swal.fire('Muchas gracias, su mensaje fue recibido correctamente y sera respondido lo mas antes posible');
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Muchas gracias, su mensaje fue recibido correctamente y sera respondido lo mas antes posible',
+            showConfirmButton: false,
+            timer: 9500
+          })
 
-        alert("Formulario enviado!!!!");
+        //alert("Formulario enviado!!!!");
     }
     else{
         alert("Datos incorrectos, revise, ingreselos y envielos nuevamente!!!");
