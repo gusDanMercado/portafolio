@@ -35,15 +35,23 @@ header video {
     transform: translateX(-50%) translateY(-50%);
 }
 
+#descripcionsobremi {
+    text-align: justify;
+}
+
+#fotoperfil{
+    margin: 15px;
+}
+
 header .container {
     position: relative;
     z-index: 1;
 }
 
-/* NAV */
+/* NAV 
 .navbar {
     background-color: #20bddc;
-}
+}*/
 
 .nav-item:hover {
     background-color: white;
@@ -53,7 +61,7 @@ header .container {
 
 /* otras partes de mi portafolio */
 
-#habilidades, #contacto {
+#habilidades, #contacto, #sobremi {
     background-color: #36bed9;
 }
 
